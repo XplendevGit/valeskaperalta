@@ -1,4 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lilita+One&family=Righteous&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .btn-primario {
+      @apply bg-secundario hover:bg-fondo-hover text-white font-bold py-2 px-4 lg:text-lg md:text-base text-xs;
+    }
+
+    .btn-secundario {
+      @apply bg-primario hover:bg-fondo-hover text-white rounded-full font-bold py-2 px-4;
+    }
+
+    .texto-títulos {
+        @apply lilita-one-regular lg:text-4xl text-2xl;
+    }
+
+    .texto-subtitulos {
+        @apply righteous-regular lg:text-lg text-base;
+    }
+
+    .texto-general {
+        @apply comfortaa lg:text-lg md:text-base text-xs;
+    }
+  }
+
+  /* Text Styles Google Fonts*/
+
+  .righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .comfortaa {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }

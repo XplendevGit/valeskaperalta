@@ -1,13 +1,15 @@
-import Image from 'next/image'
+import React from 'react'
 
-export default function Home() {
+const About = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <div className="conteiner">
-      Esto se pondrá buenisimo y Muy Entretenido , tu puedes!
+      Acerca de Mí
       </div>
       
     </div>
   )
 }
+
+export default About
