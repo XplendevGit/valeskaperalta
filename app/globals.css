@@ -9,11 +9,11 @@
     }
 
     .btn-secundario {
-      @apply w-auto hover:scale-105 transition-all duration-200 shadow-md shadow-black/30 px-6 py-1 text-white border-[2px] bg-gradient-to-r from-[#d46d7c] to-[#D2B2C9] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
+      @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] hover:border-[#d46d7c] bg-[#d46d7c] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
     }
 
     .texto-títulos {
-        @apply lilita-one-regular xl:text-6xl md:text-4xl text-2xl;
+        @apply lilita-one-regular xl:text-8xl lg:text-6xl md:text-5xl text-3xl;
     }
 
     .texto-subtitulos {

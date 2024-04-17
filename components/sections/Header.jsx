@@ -21,6 +21,7 @@ const Header = () => {
     { href: "/", label: "Inicio" },
     { href: "/about", label: "Conóceme" },
     { href: "/servicios", label: "Servicios" },
+    { href: "/recetas", label: "Recetas" },
     { href: "/blog", label: "Sección Educativa" }
   ];
 
@@ -79,7 +80,7 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0, }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.2 }}
           >
             <TopHeader onClick={handleTopHeaderClick} />
           </motion.div>
@@ -87,7 +88,7 @@ const Header = () => {
       </AnimatePresence>
 
       <motion.div
-  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] transition-all duration-300`}
+  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] transition-all duration-300`}
   onClick={handleClickOutsideMenu}
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
@@ -159,19 +160,23 @@ const Header = () => {
               exit={{ opacity: 0, x: '100%' }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="lg:text-2xl text-lg transition-all duration-150 text-white font-bold">Navegación</h1>
+              <h1 className="lg:text-2xl text-lg transition-all duration-150 text-white font-bold" style={{ filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4))' }}>
+                Navegación
+              </h1>
               {navLinks.map((link, index) => (
                 <motion.h1
                   key={index}
                   onClick={closeMenu}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="text-center w-auto hover:scale-105 duration-200 transition-all"
+                  className="text-center w-auto transition-all"
                 >
                   <Link href={link.href}>
-                    <h1 className="cursor-pointer lg:text-lg text-sm hover:scale-105 transition-all duration-150 text-white font-bold">
+                  <h1 className="cursor-pointer lg:text-xl text-sm hover:scale-105 transition-all  duration-150 text-white font-bold texto-general"
+                  style={{ filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4))' }}
+                  >
                       {link.label}
-                    </h1>
+                  </h1>
                   </Link>
                 </motion.h1>
               ))}

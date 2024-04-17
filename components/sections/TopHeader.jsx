@@ -11,7 +11,12 @@ const TopHeader = ({ onClick }) => {
   };
 
   return (
-    <div className="flex z-10 w-full h-auto bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c]" onClick={onClick}>
+    <motion.div 
+    className="flex z-10 w-full h-auto bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]" onClick={onClick}
+    exit={{ opacity: 0, height: 0, }}
+    transition={{ duration: 0.2 }}
+    >
+
         <div className="flex container justify-between items-center">
             <Link href="/">
               <motion.div className="flex space-x-2 cursor-pointer items-center hover:scale-105 transition-all duration-200">
@@ -31,7 +36,7 @@ const TopHeader = ({ onClick }) => {
               </button>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

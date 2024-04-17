@@ -49,7 +49,7 @@ module.exports = {
           DEFAULT: "#293239",
           hover: "#293239",
         },
-
+        
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
