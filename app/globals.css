@@ -5,15 +5,15 @@
 
 @layer components {
     .btn-primario {
-      @apply bg-secundario hover:bg-fondo-hover text-white font-bold py-2 px-4 lg:text-lg md:text-base text-xs;
+      @apply bg-green-500 hover:bg-[#D2B2C9] text-white font-bold py-2 px-4 lg:text-lg md:text-base text-xs;
     }
 
     .btn-secundario {
-      @apply bg-primario hover:bg-fondo-hover text-white rounded-full font-bold py-2 px-4;
+      @apply w-auto hover:scale-105 transition-all duration-200 shadow-md shadow-black/30 px-6 py-1 text-white border-[2px] bg-gradient-to-r from-[#d46d7c] to-[#D2B2C9] text-center rounded-full font-bold righteous-regular lg:text-lg text-xs;
     }
 
     .texto-títulos {
-        @apply lilita-one-regular lg:text-4xl text-2xl;
+        @apply lilita-one-regular xl:text-6xl md:text-4xl text-2xl;
     }
 
     .texto-subtitulos {

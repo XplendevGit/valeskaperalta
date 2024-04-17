@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link';
 import React from 'react'
+import { motion } from 'framer-motion';
 
 import { IoLogoWhatsapp, IoLogoInstagram } from "react-icons/io";
 
@@ -9,20 +11,20 @@ const TopHeader = ({ onClick }) => {
   };
 
   return (
-    <div className="flex w-full h-auto bg-apoyo2 z-30" onClick={onClick}>
+    <div className="flex w-full h-auto bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] z-30" onClick={onClick}>
         <div className="flex container justify-between items-center">
             <Link href="/">
-              <div className="flex space-x-2 cursor-pointer items-center">
-               <IoLogoWhatsapp className="md:w-6 md:h-6 h-5 w-5 text-[#4DC356]">
+              <motion.div className="flex space-x-2 cursor-pointer items-center hover:scale-105 transition-all duration-200">
+               <IoLogoWhatsapp className="md:w-6 md:h-6 h-5 w-5 text-green-600">
                </IoLogoWhatsapp> 
-               <h1 className="texto-general">
+               <h1 className="texto-general text-white">
                 +569 94661560
                </h1> 
-              </div>
+              </motion.div>
             </Link>
 
             <div className="flex space-x-4 items-center">
-              <IoLogoInstagram className="md:w-8 md:h-8 w-6 h-6 text-[#FF00B6] cursor-pointer">
+              <IoLogoInstagram className="md:w-8 md:h-8 w-6 h-6 text-white cursor-pointer hover:scale-105 transition-all duration-200">
               </IoLogoInstagram>
               <button className="btn-primario" onClick={handleButtonClick}>
                 Agendar una Cita

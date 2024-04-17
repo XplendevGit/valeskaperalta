@@ -13,6 +13,10 @@ module.exports = {
       center: true,
       padding: "15px",
     },
+    container_mobil: {
+      center: true,
+      padding: "10px",
+    },
     screens: {
       "sm": "640px",
       "md": "768px",

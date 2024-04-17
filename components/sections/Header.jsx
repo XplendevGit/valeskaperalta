@@ -79,7 +79,7 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0, }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           >
             <TopHeader onClick={handleTopHeaderClick} />
           </motion.div>
@@ -87,12 +87,12 @@ const Header = () => {
       </AnimatePresence>
 
       <motion.div
-  className={`flex w-full h-[${headerHeight}] fixed border-b-[1px] bg-white transition-all duration-300`}
+  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] transition-all duration-300`}
   onClick={handleClickOutsideMenu}
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }} // Ajusta la duración de la transición de salida aquí
-  transition={{ duration: 0.3 }} // Duración de la transición de entrada
+  transition={{ duration: 0.5 }} // Duración de la transición de entrada
       >
         <div className="container flex justify-between items-center z-30">
           <div className="w-[110px] h-[110px] flex">
@@ -136,10 +136,10 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="texto-subtitulos hidden md:flex h-auto xl:space-x-8 lg:space-x-6 space-x-4">
+          <div className="hidden md:flex h-auto xl:space-x-8 lg:space-x-6 space-x-4">
             {navLinks.map((link, index) => (
               <Link key={index} href={link.href}>
-                <h1 className="cursor-pointer hover:scale-105 transition-all duration-150">{link.label}</h1>
+                <h1 className="cursor-pointer lg:text-lg text-sm hover:scale-105 transition-all duration-150 text-white font-bold">{link.label}</h1>
               </Link>
             ))}
           </div>
@@ -149,23 +149,25 @@ const Header = () => {
           {showMenu && (
             <motion.div
               ref={menuRef} 
-              className="md:hidden bg-white h-screen w-1/2 flex flex-col border-x-[1px] absolute right-0 pt-8 space-y-6 text-center items-center"
+              className="md:hidden bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] h-screen w-1/2 flex flex-col absolute right-0 pt-20 space-y-6 text-center items-center"
               initial={{ opacity: 0, x: '100%' }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="texto-títulos">Navegación</h1>
+              <h1 className="lg:text-2xl text-lg transition-all duration-150 text-white font-bold">Navegación</h1>
               {navLinks.map((link, index) => (
                 <motion.h1
                   key={index}
                   onClick={closeMenu}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="texto-subtitulos text-center cursor-pointer w-auto hover:scale-105 duration-200 transition-all"
+                  className="text-center w-auto hover:scale-105 duration-200 transition-all"
                 >
                   <Link href={link.href}>
-                    {link.label}
+                    <h1 className="cursor-pointer lg:text-lg text-sm hover:scale-105 transition-all duration-150 text-white font-bold">
+                      {link.label}
+                    </h1>
                   </Link>
                 </motion.h1>
               ))}
