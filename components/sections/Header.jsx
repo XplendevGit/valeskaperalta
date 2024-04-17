@@ -87,7 +87,7 @@ const Header = () => {
       </AnimatePresence>
 
       <motion.div
-  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] transition-all duration-300`}
+  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] transition-all duration-300`}
   onClick={handleClickOutsideMenu}
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
@@ -102,6 +102,7 @@ const Header = () => {
               width={280}
               height={200}
               className="object-contain h-full w-full"
+              style={{ filter: 'drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.4))' }}
             />
           </div>
 
@@ -139,7 +140,10 @@ const Header = () => {
           <div className="hidden md:flex h-auto xl:space-x-8 lg:space-x-6 space-x-4">
             {navLinks.map((link, index) => (
               <Link key={index} href={link.href}>
-                <h1 className="cursor-pointer lg:text-lg text-sm hover:scale-105 transition-all duration-150 text-white font-bold">{link.label}</h1>
+                <h1 className="cursor-pointer lg:text-xl text-sm hover:scale-105 transition-all duration-150 text-white font-bold texto-general"
+                style={{ filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4))' }}>
+                  {link.label}
+                </h1>
               </Link>
             ))}
           </div>

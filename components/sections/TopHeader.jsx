@@ -11,7 +11,7 @@ const TopHeader = ({ onClick }) => {
   };
 
   return (
-    <div className="flex w-full h-auto bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c] z-30" onClick={onClick}>
+    <div className="flex z-10 w-full h-auto bg-gradient-to-r from-[#D2B2C9] to-[#d46d7c]" onClick={onClick}>
         <div className="flex container justify-between items-center">
             <Link href="/">
               <motion.div className="flex space-x-2 cursor-pointer items-center hover:scale-105 transition-all duration-200">
