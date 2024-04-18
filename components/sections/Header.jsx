@@ -72,7 +72,9 @@ const Header = () => {
   }, [showTopHeader]);
 
   return (
+
     <div>
+      {/* Top Header Render */}
       <AnimatePresence>
         {showTopHeader && (
           <motion.div
@@ -87,15 +89,17 @@ const Header = () => {
         )}
       </AnimatePresence>
 
+      {/* Header div */}
       <motion.div
-  className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] transition-all duration-300`}
-  onClick={handleClickOutsideMenu}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }} // Ajusta la duración de la transición de salida aquí
-  transition={{ duration: 0.5 }} // Duración de la transición de entrada
-      >
+       className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] transition-all duration-300 shadow-white/40 shadow-sm`}
+        onClick={handleClickOutsideMenu}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }} // Ajusta la duración de la transición de salida aquí
+        transition={{ duration: 0.5 }} // Duración de la transición de entrada
+       >
         <div className="container flex justify-between items-center z-30">
+          {/* Logo */}
           <div className="w-[110px] h-[110px] flex">
             <Image
               src="https://i.postimg.cc/4xdpQfwW/Logo-vp-280x200.png"
@@ -107,6 +111,7 @@ const Header = () => {
             />
           </div>
 
+          {/* Navigation Menu Desktop */}
           <div className="md:hidden transition-all ease-in-out duration-300 x-30">
             <button
               onClick={() => setShowMenu(!showMenu)}
@@ -150,6 +155,7 @@ const Header = () => {
           </div>
         </div>
 
+      {/* Navigation Menu Mobil */}
         <AnimatePresence>
           {showMenu && (
             <motion.div

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lilita+One&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Comfortaa:wght@300..700&family=Lilita+One&family=Righteous&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,11 +9,11 @@
     }
 
     .btn-secundario {
-      @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] hover:border-[#d46d7c] bg-[#d46d7c] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
+      @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] border-[#d46d7c] bg-[#d46d7c] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
     }
 
     .texto-títulos {
-        @apply lilita-one-regular xl:text-8xl lg:text-6xl md:text-5xl text-3xl;
+        @apply allura-regular xl:text-9xl lg:text-7xl md:text-6xl text-4xl;
     }
 
     .texto-subtitulos {
@@ -26,6 +26,12 @@
   }
 
   /* Text Styles Google Fonts*/
+
+  .allura-regular {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
   .righteous-regular {
     font-family: "Righteous", sans-serif;

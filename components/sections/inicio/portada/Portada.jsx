@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 import { motion } from "framer-motion";
 
-import style from './portada.module.css'
+import style from '././portada.module.css'
 
 const Portada = () => {
   return (
-    <div className="overflow-hidden flex min-h-screen h-screen w-full flex-col items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
+    <div className="overflow-hidden flex min-h-screen h-full w-full flex-col items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
 
       <div className={`flex container h-full w-full ${style['contenedor-portada']}`}>
       
@@ -25,7 +25,7 @@ const Portada = () => {
           <h1 className="texto-títulos text-white text-center md:text-start"
           style={{ textShadow: "6px 6px 8px #022211" }} 
           >
-           Tu Dieta Personalizada
+           ¡Bienvenidos!
             </h1>
 
             <h1 className="texto-subtitulos text-xs md:text-base xl:text-lg text-white"

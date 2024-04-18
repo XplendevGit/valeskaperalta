@@ -1,0 +1,99 @@
+ /* DISEÑO CSS GRID BENEFICIOS*/
+
+            /* DISEÑO CSS GRID BENEFICIOS*/
+            @media screen and (min-width: 0px) and (max-width: 640px) {
+              .contenedor-beneficios{
+                display: grid;
+                grid-gap: 2rem;
+                /* Creamos las columnas y sus medidad*/
+                grid-template-columns: 1fr;
+                /* Creamos las filas y sus valores de medidas*/
+                grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
+               }
+               .beneficios-1{
+                   grid-column: 1/2;
+                   grid-row: 1/2;
+                }
+              .beneficios-2{
+                  grid-column: 1/2;
+                  grid-row: 2/3;
+               }
+               .beneficios-3{
+                 grid-column: 1/2;
+                 grid-row: 3/4;
+               }
+               .beneficios-4{
+                 grid-column: 1/2;
+                 grid-row: 4/5;
+               }
+              .beneficios-5{
+                 grid-column: 1/2;
+                 grid-row: 5/6;
+               }
+              }
+                      
+                      /* BENEFICIOS  para tabletas (426px a 768px) */
+                      @media screen and (min-width: 641px) and (max-width: 768px) {
+                        .contenedor-beneficios{
+                          display: grid;
+                          grid-gap: 2rem;
+                          /* Creamos las columnas y sus medidad*/
+                          grid-template-columns: 1fr;
+                          /* Creamos las filas y sus valores de medidas*/
+                          grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
+                         }
+                         .beneficios-1{
+                             grid-column: 1/2;
+                             grid-row: 1/2;
+                          }
+                        .beneficios-2{
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                         }
+                         .beneficios-3{
+                           grid-column: 1/2;
+                           grid-row: 3/4;
+                         }
+                         .beneficios-4{
+                           grid-column: 1/2;
+                           grid-row: 4/5;
+                         }
+                        .beneficios-5{
+                           grid-column: 1/2;
+                           grid-row: 5/6;
+                         }
+
+                      }
+                      
+                      /* BENEFICIOS  para escritorio (767px en adelante) */
+                      @media screen and (min-width: 766px) {
+                        .contenedor-beneficios{
+                            display: grid;
+                            grid-gap: 2rem;
+                            /* Creamos las columnas y sus medidad*/
+                            grid-template-columns: 1fr 1fr 1fr;
+                            /* Creamos las filas y sus valores de medidas*/
+                            grid-template-rows: 0.1fr 0.1fr 0.6fr;
+                           }
+                           .beneficios-1{
+                               grid-column: 1/4;
+                               grid-row: 1/2;
+                            }
+                          .beneficios-2{
+                              grid-column: 1/4;
+                              grid-row: 2/3;
+                           }
+                           .beneficios-3{
+                             grid-column: 1/2;
+                             grid-row: 3/4;
+                           }
+                           .beneficios-4{
+                             grid-column: 2/3;
+                             grid-row: 3/4;
+                           }
+                          .beneficios-5{
+                             grid-column: 3/4;
+                             grid-row: 3/4;
+                           }
+
+                        }

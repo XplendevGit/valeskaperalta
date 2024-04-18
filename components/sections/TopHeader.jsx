@@ -29,11 +29,15 @@ const TopHeader = ({ onClick }) => {
             </Link>
 
             <div className="flex space-x-4 items-center">
+              <Link href='https://www.instagram.com/lanutrivale_/'>
+              
               <IoLogoInstagram className="md:w-8 md:h-8 w-6 h-6 text-white cursor-pointer hover:scale-105 transition-all duration-200">
               </IoLogoInstagram>
+              </Link>
               <button className="btn-primario" onClick={handleButtonClick}>
                 Agendar una Cita
               </button>
+
             </div>
         </div>
     </motion.div>
