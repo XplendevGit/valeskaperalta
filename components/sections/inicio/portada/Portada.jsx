@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import Image from 'next/image'
 
 import { motion } from "framer-motion";
 
@@ -22,7 +21,7 @@ const Portada = () => {
 
           <div className="flex flex-col space-y-2 w-auto h-auto">
 
-          <h1 className="texto-títulos text-white text-center md:text-start"
+          <h1 className="texto-titulos text-white text-center md:text-start"
           style={{ textShadow: "6px 6px 8px #022211" }} 
           >
            ¡Bienvenidos!

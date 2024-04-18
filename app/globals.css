@@ -12,8 +12,8 @@
       @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] border-[#d46d7c] bg-[#d46d7c] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
     }
 
-    .texto-títulos {
-        @apply allura-regular xl:text-9xl lg:text-7xl md:text-6xl text-4xl;
+    .texto-titulos {
+        @apply allura-regular xl:text-9xl lg:text-7xl md:text-6xl text-5xl;
     }
 
     .texto-subtitulos {
@@ -23,6 +23,10 @@
     .texto-general {
         @apply comfortaa lg:text-lg md:text-base text-xs;
     }
+
+    .texto-general-normal {
+      @apply xl:text-lg text-xs;
+  }
   }
 
   /* Text Styles Google Fonts*/
