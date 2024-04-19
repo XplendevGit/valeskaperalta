@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Blog = () => {
+const Recetas = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
 
       <div className="container">
-         Sección Educativa
+         Recetas
       </div>
     
   </div>
   )
 }
 
-export default Blog
+export default Recetas

@@ -17,7 +17,7 @@
     }
 
     .texto-subtitulos {
-        @apply righteous-regular lg:text-lg text-base;
+        @apply righteous-regular xl:text-lg text-[14px];
     }
 
     .texto-general {

@@ -78,7 +78,7 @@ const Beneficios = () => {
 
           <div className={`w-full h-full flex min-h-[240px] max-w-[250px] md:min-h-[300px] xl:min-h-[340px] lg:min-w-[210px] xl:min-w-[330px] mx-auto bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] rounded-xl transition-all duration-200 hover:scale-105 shadow-2xl ${style['beneficios-5']}`}>
 
-            <div className="w-full h-full flex flex-col p-6 items-center space-y-4 text-white">
+            <div className="w-full h-full flex flex-col p-4 xl:p-6 items-center space-y-4 text-white">
               <motion.img
                  src="https://i.postimg.cc/7ZHV7Zpg/3.png"
                  alt="Logo"
