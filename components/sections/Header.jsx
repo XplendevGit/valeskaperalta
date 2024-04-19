@@ -19,7 +19,6 @@ const Header = () => {
 
   const navLinks = [
     { href: "/", label: "Inicio" },
-    { href: "/about", label: "Conóceme" },
     { href: "/servicios", label: "Servicios" },
     { href: "/recetas", label: "Recetas" },
     { href: "/blog", label: "Sección Educativa" }
@@ -91,7 +90,9 @@ const Header = () => {
 
       {/* Header div */}
       <motion.div
-       className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] transition-all duration-300 shadow-white/40 shadow-sm`}
+       className={`flex w-full lg:h-[${headerHeight}] h-[80px] fixed z-10 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] transition-all duration-300 ${
+        !showTopHeader ? 'shadow-lg shadow-white/40' : 'shadow-none'
+      }`}
         onClick={handleClickOutsideMenu}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
