@@ -41,11 +41,15 @@ const Footer = () => {
                 </div>
                    
                   <div className="flex w-full h-full justify-center space-x-4">
-                    <IoLogoWhatsapp className="cursor-pointer w-[25px] h-[25px]">
-                    </IoLogoWhatsapp>  
+                    <Link href="">
+                      <IoLogoWhatsapp className="w-[26px] h-[26px] cursor-pointer hover:scale-105 transition-all duration-150">
+                      </IoLogoWhatsapp>  
+                    </Link>
 
-                    <AiFillInstagram className="cursor-pointer w-[27px] h-[27px]">
-                    </AiFillInstagram>  
+                    <Link href="">
+                      <AiFillInstagram className="w-[27px] h-[27px] cursor-pointer hover:scale-105 transition-all duration-150">
+                      </AiFillInstagram>  
+                    </Link>
                   </div>
 
                </div>
@@ -55,6 +59,7 @@ const Footer = () => {
             <div className={`w-full h-full flex ${style['footer-3']}`}>
                <div className="flex w-full h-full flex-col justify-center items-center p-4">
                   <ol className="texto-subtitulos text-white space-y-2 text-center">
+                    <li className="text-black/70">MENÚ DE NAVEGACIÓN</li>
                     <li className="cursor-pointer hover:scale-105 transition-all duration-150">Inicio</li>
                     <li className="cursor-pointer hover:scale-105 transition-all duration-150">Servicios</li>
                     <li className="cursor-pointer hover:scale-105 transition-all duration-150">Recetas</li>
@@ -64,9 +69,23 @@ const Footer = () => {
             </div>
 
             {/* Contenedor 4 Contacto, Dirección y Preguntas Frecuentes */}
-            <div className={`w-full h-full bg-red-200 ${style['footer-4']}`}>
-              <div className="flex flex-col w-full h-full justify-center items-center p-4">
-                 
+            <div className={`w-full h-full ${style['footer-4']}`}>
+              <div className="flex flex-col w-full h-full justify-center p-4 space-y-2">
+                  <ol className="texto-subtitulos text-white">
+                     <li className="uppercase text-black/70">Contacto</li>
+                     <li className="">valeperaltatorres@gmail.com</li>
+                  </ol>
+
+                  <ol className="texto-subtitulos text-white">
+                     <li className="uppercase text-black/70">Dirección</li>
+                     <li className="cursor-pointer transition-all duration-150 border-transparent border-b-[1px] hover:border-b-white">Villa Izolina Barraza x, Vicuña, Chile.</li>
+                  </ol>
+
+                  <ol className="texto-subtitulos text-white">
+                     <li className="uppercase text-black/70">Condiciones</li>
+                     <li className="cursor-pointer transition-all duration-150 border-transparent border-b-[1px] hover:border-b-white">Cancelación de Horas Reservadas</li>
+                     <li className="cursor-pointer transition-all duration-150 border-transparent border-b-[1px] hover:border-b-white">Preguntas Frecuentes</li>
+                  </ol>
               </div>
             </div>
 

@@ -17,7 +17,7 @@ const EmailForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Ingresa tu email"
-        className="flex-1 p-2 texto-general-normal border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#d46d7c] focus:border-transparent rounded-full"
+        className="flex-1 px-4 py-2 texto-general-normal border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#d46d7c] focus:border-transparent rounded-full text-gray-300"
       />
       <button
         type="submit"
