@@ -36,7 +36,7 @@ const Footer = () => {
             {/* Contenedor 1 Enviar Correo */}
             <div className={`w-full h-full ${style['footer-1']}`}>
                <div className="flex flex-col justify-center items-center p-4 space-y-6">
-                <h1 className="texto-subtitulos text-white lg:text-2xl xl:text-4xl">
+                <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl">
                   Si tienes dudas, ¡Contáctame!
                 </h1>
                   <EmailForm />

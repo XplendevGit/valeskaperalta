@@ -26,7 +26,11 @@
 
     .texto-general-normal {
       @apply xl:text-lg text-xs;
-  }
+    }
+
+    .text-balance{
+      text-wrap: balance;
+    }
   }
 
   /* Text Styles Google Fonts*/
