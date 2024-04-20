@@ -21,7 +21,7 @@
     }
 
     .texto-general {
-        @apply comfortaa lg:text-lg md:text-base text-xs;
+        @apply comfortaa xl:text-lg md:text-base text-xs;
     }
 
     .texto-general-normal {
