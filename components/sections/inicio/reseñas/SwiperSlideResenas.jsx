@@ -20,7 +20,7 @@ export default function SwiperSlideResenas() {
         spaceBetween={30}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="swiperslidecolor"
+        className="swiperslidecolor cursor-grab"
       >
         <SwiperSlide>
             {/* Resena map future Integration */}

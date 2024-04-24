@@ -24,8 +24,8 @@ const SobreMi = () => {
              </div>
           </div>
 
-          <div className={`w-full h-full bg-red-200 ${style['sobremi-3']}`}>
-              <div className="flex w-full h-full justify-center items-center px-12">
+          <div className={`w-full h-full flex justify-center items-center ${style['sobremi-3']}`}>
+              <div className="flex w-[180px] h-[180px] lg:w-[250px] lg:h-[250px] justify-center items-center px-12 bg-white border-[4px] border-primario rounded-full">
                  Imagen
               </div>
           </div>
