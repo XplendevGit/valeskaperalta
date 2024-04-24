@@ -1,14 +1,11 @@
+import RecetasPortada from '@/components/sections/recetas/portada/RecetasPortada'
 import React from 'react'
 
 const Recetas = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-
-      <div className="container">
-         Recetas
-      </div>
-    
-  </div>
+    <>
+    <RecetasPortada />
+    </>
   )
 }
 

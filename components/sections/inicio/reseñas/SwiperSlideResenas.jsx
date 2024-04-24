@@ -24,7 +24,7 @@ export default function SwiperSlideResenas() {
       >
         <SwiperSlide>
             {/* Resena map future Integration */}
-            <div className="w-full h-full text-center p-4 lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
+            <div className="w-full h-full text-center lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
               <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center">Nombre de Paciente</h1>
               <h1 
               className="texto-general text-balance text-white"
@@ -36,7 +36,7 @@ export default function SwiperSlideResenas() {
         </SwiperSlide>
         <SwiperSlide>
             {/* Resena map future Integration */}
-            <div className="w-full h-full text-center p-4 lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
+            <div className="w-full h-full text-center lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
               <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center">Nombre de Paciente</h1>
               <h1 
               className="texto-general text-balance text-white"
@@ -48,7 +48,7 @@ export default function SwiperSlideResenas() {
         </SwiperSlide>
         <SwiperSlide>
             {/* Resena map future Integration */}
-            <div className="w-full h-full text-center p-4 lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
+            <div className="w-full h-full text-center lg:p-12 flex flex-col items-center space-y-2 lg:space-y-8">
               <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center">Nombre de Paciente</h1>
               <h1 
               className="texto-general text-balance text-white"
