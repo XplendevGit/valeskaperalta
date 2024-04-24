@@ -7,7 +7,7 @@ import style from '././portada.module.css'
 
 const Portada = () => {
   return (
-    <div className="overflow-hidden flex min-h-screen h-full w-full flex-col items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
+    <div className="overflow-hidden flex h-full w-full flex-col items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
 
       <div className={`flex container h-full w-full ${style['contenedor-portada']}`}>
       
@@ -27,8 +27,9 @@ const Portada = () => {
            ¡Bienvenidos!
             </h1>
 
-            <h1 className="texto-subtitulos text-xs md:text-base xl:text-lg text-white"
-            style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }} >
+            <h1 className="texto-general text-balance text-white"
+                style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+             >
              Planes de dieta personalizados para ti: científicos, equilibrados y deliciosos. Alcanza tu peso ideal y mejora tu bienestar con nuestra ayuda experta.
             </h1>
 

@@ -63,7 +63,7 @@ const Footer = () => {
                       </IoLogoWhatsapp>  
                     </Link>
 
-                    <Link href="">
+                    <Link href="https://www.instagram.com/lanutrivale_/?hl=es">
                       <AiFillInstagram className="w-[27px] h-[27px] cursor-pointer hover:scale-105 transition-all duration-150">
                       </AiFillInstagram>  
                     </Link>

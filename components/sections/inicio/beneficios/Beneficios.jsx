@@ -42,7 +42,8 @@ const Beneficios = () => {
                  style={{ filter: 'drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.4))' }}
                />
  
-              <h1 className="texto-subtitulos text-center">
+              <h1 
+              className="texto-subtitulos text-center">
                 Entrevista Nutricional Completa
               </h1>
 
