@@ -26,7 +26,7 @@ const Reseñas = () => {
             </h1>
         </div>
         
-        <div className={`flex max-h-full max-w-full w-[480px] h-[310px] lg:w-[650px] lg:h-[400px] xl:w-[850px] xl:h-[600px] rounded-xl bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] ${style['resenas-3']}`}>
+        <div className={`flex max-h-full max-w-full w-[480px] min-h-[310px] lg:w-[650px] lg:min-h-[400px] xl:w-[850px] xl:min-h-[600px] rounded-xl bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] ${style['resenas-3']}`}>
 
         <div className="w-full h-full flex flex-col p-6 items-center justify-center space-y-4 text-white">
               <img
@@ -38,7 +38,7 @@ const Reseñas = () => {
                  style={{ filter: 'drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.4))' }}
                />
  
-              <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl">
+              <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center">
                 Esto es lo que dicen Nuestros Pacientes
               </h1>
 
