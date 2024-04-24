@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Beneficios = () => {
   return (
-    <div className="overflow-hidden flex min-h-screen h-full w-full items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-[#F5F5F5]">
+    <div className="overflow-hidden flex h-full w-full items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-[#F5F5F5]">
         
         <div 
         className={`container w-full flex h-full items-center space-y-4 lg:px-24 ${style['contenedor-beneficios']}`} 
