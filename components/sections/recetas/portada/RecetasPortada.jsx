@@ -45,7 +45,7 @@ const RecetasPortada = () => {
     setSelectedRecipe(index);
     // Aplicar animación a la imagen grande al hacer hover
     setImageAnimation({
-      opacity: 1,
+      opacity: 0,
       rotate: 360
     });
   };
@@ -57,16 +57,16 @@ const RecetasPortada = () => {
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
         transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
-        className={`container h-full w-auto m-24 p-24 space-y-4 lg:space-y-0 rounded-2xl shadow-2xl ${style['contenedor-recetas-portada']}`} style={{ backgroundColor: recipes[selectedRecipe].backgroundColor }}>
+        className={`container h-full w-auto py-8 lg:py-0 lg:p-24 gap-4 lg:gap-0 rounded-2xl shadow-2xl ${style['contenedor-recetas-portada']}`} style={{ backgroundColor: recipes[selectedRecipe].backgroundColor }}>
 
         {/* Contenedor 1 , 2 y 3 Reducido para Renderizar optimamente las imagenes correspondientes de las recetas*/}
         {recipes.map((recipe, index) => (
           <motion.div
           key={index}
-          className={`w-[150px] h-[150px] flex justify-center items-center transition-all duration-150 ${style[`recetas-portada-${index + 1}`]}`}
+          className={`w-auto h-auto lg:w-[150px] lg:h-[150px] flex justify-center items-center transition-all duration-150 ${style[`recetas-portada-${index + 1}`]}`}
           onMouseEnter={() => handleRecipeHover(index)}
         >
-          <div className="w-[150px] h-[150px] flex object-center items-center text-center rounded-full">
+          <div className="w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] flex object-center items-center text-center rounded-full">
             <Image
               className='hover:scale-105 transition-all duration-150 cursor-pointer'
               style={{ filter: 'drop-shadow(10px 8px 4px rgba(0, 0, 0, 0.4))' }}
@@ -81,17 +81,16 @@ const RecetasPortada = () => {
         ))}
 
       {/* Contenedor 4 Imagen Grande de la Receta*/}
-      <motion.div
-          className={`w-full justify-center items-center ${style['recetas-portada-4']}`}
-        >
           <motion.div
             initial={{ opacity: 0, rotate: 180 }}
             animate={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 0.4, type: "spring", stiffness: 100, damping: 10 }}
+            className={`w-full h-full flex justify-center items-center ${style['recetas-portada-4']}`}
+
           >
-            <div className="w-[380px] h-[380px]">
+            <div className="w-full h-full flex lg:w-[380px] lg:h-[380px]">
               <Image
-                className='hover:scale-105 transition-all duration-150 cursor-pointer w-[350px] h-[350px] object-cover'
+                className='hover:scale-105 transition-all duration-150 mx-auto cursor-pointer w-[150px] h-[150px] lg:w-[380px] lg:h-[380px] object-cover'
                 style={{ filter: 'drop-shadow(24px 30px 10px rgba(0, 0, 0, 0.4))' }}
                 src={recipes[selectedRecipe].imageUrl}
                 alt={`Receta ${selectedRecipe + 1}`}
@@ -101,7 +100,6 @@ const RecetasPortada = () => {
               />
             </div>
           </motion.div>
-        </motion.div>
 
       {/* Contenedor 5 Nombre de la Receta */}
         <div className={`w-full h-full ${style['recetas-portada-5']}`}>
@@ -117,8 +115,8 @@ const RecetasPortada = () => {
 
       {/* Contenedor 6 Descripción Textos */}
         <div className={`w-full h-full ${style['recetas-portada-6']}`}>
-          <div className="w-full h-auto flex flex-col space-y-2">
-            <div className="w-full h-full flex">
+          <div className="w-full h-auto flex flex-col lg:space-y-2">
+            <div className="w-full h-full text-center lg:text-start">
               <h1 
                 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl"
                 style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
@@ -128,7 +126,7 @@ const RecetasPortada = () => {
             </div>
 
            {/* Div Descripcion Textos */}
-            <div className="w-full h-full flex items-baseline space-x-2">
+            <div className="w-full h-full flex items-baseline justify-center lg:justify-start space-x-2">
               <h1 
                 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-2xl"
                 style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}> 
@@ -149,7 +147,7 @@ const RecetasPortada = () => {
             </div>
 
              {/* Div boton de ver receta */}
-            <div className="w-full h-full flex pt-4">
+            <div className="w-full h-full flex pt-4 justify-center lg:justify-start">
               <button className="btn-secundario"> 
                   Ver Esta Receta
               </button>
@@ -158,8 +156,8 @@ const RecetasPortada = () => {
         </div>
 
       {/* Contenedor 7 Titulo de la recetas*/}
-        <div className={`w-full h-full ${style['recetas-portada-7']}`}>
-          <div className="w-full h-full flex px-14 ">
+        <div className={`w-full h-full justify-center items-center ${style['recetas-portada-7']}`}>
+          <div className="w-full h-full text-center lg:text-start">
             <h1 
               className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl"
               style={{ textShadow: "6px 6px 8px #022211" }} 
