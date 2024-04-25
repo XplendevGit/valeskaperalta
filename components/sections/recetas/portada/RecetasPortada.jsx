@@ -57,7 +57,7 @@ const RecetasPortada = () => {
         initial={{ opacity: 0, }}
         animate={{ opacity: 1, }}
         transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
-        className={`container h-full w-auto py-8 lg:py-0 lg:p-24 gap-4 lg:gap-0 rounded-2xl shadow-2xl ${style['contenedor-recetas-portada']}`} style={{ backgroundColor: recipes[selectedRecipe].backgroundColor }}>
+        className={`container h-full w-auto py-8 lg:p-24 gap-4 lg:gap-0 rounded-2xl shadow-2xl ${style['contenedor-recetas-portada']}`} style={{ backgroundColor: recipes[selectedRecipe].backgroundColor }}>
 
         {/* Contenedor 1 , 2 y 3 Reducido para Renderizar optimamente las imagenes correspondientes de las recetas*/}
         {recipes.map((recipe, index) => (
@@ -126,7 +126,7 @@ const RecetasPortada = () => {
             </div>
 
            {/* Div Descripcion Textos */}
-            <div className="w-full h-full flex items-baseline justify-center lg:justify-start space-x-2">
+            <div className="w-full h-full flex items-center justify-center lg:justify-start space-x-2">
               <h1 
                 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-2xl"
                 style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}> 
@@ -158,12 +158,28 @@ const RecetasPortada = () => {
       {/* Contenedor 7 Titulo de la recetas*/}
         <div className={`w-full h-full justify-center items-center ${style['recetas-portada-7']}`}>
           <div className="w-full h-full text-center lg:text-start">
+
+            <div className="flex w-full h-full justify-center items-center  lg:justify-start space-x-2">
             <h1 
               className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl"
               style={{ textShadow: "6px 6px 8px #022211" }} 
               >
                 Recetas Populares
             </h1>
+
+            <Image
+                  className='hover:scale-105 transition-all duration-200 cursor-pointer w-[25px] h-[25px] lg:w-[46px] lg:h-[46px]'
+                  style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+                  src="https://i.postimg.cc/h4633Z0n/star.png"
+                  alt="Estrella"
+                  width={250}
+                  height={250}
+                  objectFit='fill'
+                />
+            </div>
+
+            
+
           </div>
         </div>
 
