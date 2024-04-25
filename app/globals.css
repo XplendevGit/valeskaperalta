@@ -9,7 +9,7 @@
     }
 
     .btn-secundario {
-      @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] border-[#d46d7c] bg-[#d46d7c] text-center rounded-full font-bold righteous-regular lg:text-lg md:text-base text-xs;
+      @apply w-auto hover:scale-105 transition-all duration-200 shadow-lg shadow-black/50 px-6 py-1 text-white border-[2px] border-[#d46d7c] bg-[#d46d7c] text-center rounded-full righteous-regular lg:text-lg md:text-base text-xs;
     }
 
     .texto-titulos {
