@@ -80,7 +80,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
             {/* Contenedor de Detalles de la Receta */}
               <motion.div 
               style={{ filter: 'drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.4))' }}
-              className={`w-full h-full lg:max-h-full max-h-[250px] max-w-[240px] bg-white hover:bg-[#EFB729] rounded-xl lg:mt-[-8%] cursor-pointer pb-4 px-4 mx-auto ${style['recetas-portada-2']}`}
+              className={`w-full h-full lg:max-h-full max-h-[250px] max-w-[210px] bg-white hover:bg-[#EFB729] rounded-xl lg:mt-[-8%] cursor-pointer pb-4 px-4 mx-auto ${style['recetas-portada-2']}`}
               initial={{ opacity: 0, }}
               animate={{ opacity: 1, }}
               transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
