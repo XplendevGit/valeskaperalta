@@ -28,7 +28,7 @@ const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
        </div>
 
        {/* Contenedor Swiper Recetas */}
-       <div className="w-[850px] h-full flex justify-center pt-[80px]">
+       <div className="lg:w-[850px] w-full h-full flex justify-center items-center mx-auto pt-[80px]">
 
         <SwiperSlideReceta recipes={recipes} handleRecipeHover={handleRecipeHover}>
 

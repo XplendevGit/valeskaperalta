@@ -16,21 +16,34 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
     <>
       {/* Mostrar Swiper solo en pantallas con un ancho mayor o igual a 769px */}
       <Swiper
-        slidesPerView={3}
         spaceBetween={30}
         freeMode={true}
         loop={true}
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+          // Vista previa de 1 en pantallas móviles
+          0: {
+            slidesPerView: 1,
+          },
+          // Vista previa de 2 en tablets
+          768: {
+            slidesPerView: 2,
+          },
+          // Vista previa de 3 en pantallas más grandes
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         modules={[Pagination, FreeMode]}
-        className="mySwiper"
+        className="mySwiper "
       >
         {recipes.map((recipe, index) => (
           <SwiperSlide key={index}>
-            <div className={`w-[280px] h-[390px] ${style['contenedor-recetas-portada']}`}>
+            <div className={`lg:w-[280px] h-[390px] w-[240px] mx-auto ${style['contenedor-recetas-portada']}`}>
 
-              <div className={`w-[180px] h-[180px] z-10 ${style['recetas-portada-1']}`}>
+              <div className={`w-[180px] lg:h-[180px] h-[160px] mx-auto z-10 ${style['recetas-portada-1']}`}>
                 <Image
                   className='w-full h-[180px] object-cover cursor-grab'
                   style={{ filter: 'drop-shadow(6px 6px 2px rgba(0, 0, 0, 0.4))' }}
@@ -45,7 +58,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
             {/* Contenedor de Detalles de la Receta */}
               <div 
               style={{ filter: 'drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.4))' }}
-              className={`w-full h-full bg-white hover:bg-[#EFB729] rounded-xl mt-[-8%] cursor-grab px-2 pb-2 lg:pb-4 lg:px-4 ${style['recetas-portada-2']}`}>
+              className={`w-full h-full bg-white hover:bg-[#EFB729] rounded-xl mt-[-8%] cursor-grab pb-4 px-4 ${style['recetas-portada-2']}`}>
 
                 <div className="w-full h-full flex flex-col text-center space-y-2">
                   <h1 
