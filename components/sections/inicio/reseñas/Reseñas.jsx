@@ -29,7 +29,7 @@ const Reseñas = () => {
         <div className={`flex max-h-full max-w-full w-[480px] min-h-[310px] lg:w-[650px] lg:min-h-[400px] xl:w-[850px] xl:min-h-[600px] rounded-xl bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] shadow-2xl ${style['resenas-3']}`}>
 
         <div className="w-full h-full flex flex-col p-6 items-center justify-center space-y-4 text-white">
-              <img
+              <Image
                  src="https://i.postimg.cc/TPSb3Rzp/speech-bubble.png"
                  alt="Logo"
                  width={250}
