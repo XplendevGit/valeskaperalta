@@ -67,7 +67,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
                   className='w-full h-[152px] lg:h-[180px] object-cover cursor-pointer'
                   style={{ filter: 'drop-shadow(6px 6px 2px rgba(0, 0, 0, 0.4))' }}
                   src={recipe.imageUrl}
-                  alt={`Receta ${index + 1}`}
+                  alt={recipe.name}
                   width={250}
                   height={250}
                   initial={{ opacity: 0, rotate: 180 }}
@@ -80,7 +80,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
             {/* Contenedor de Detalles de la Receta */}
               <motion.div 
               style={{ filter: 'drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.4))' }}
-              className={`w-full h-full lg:max-h-full max-h-[250px] max-w-[210px] bg-white hover:bg-[#EFB729] rounded-xl lg:mt-[-8%] cursor-pointer pb-4 px-4 mx-auto ${style['recetas-portada-2']}`}
+              className={`w-full h-full lg:max-h-full max-h-[250px] max-w-[210px] bg-[#57E8D8] hover:bg-[${recipe.backgroundColor} rounded-xl lg:mt-[-8%] cursor-pointer pb-4 px-4 mx-auto ${style['recetas-portada-2']}`}
               initial={{ opacity: 0, }}
               animate={{ opacity: 1, }}
               transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
@@ -89,20 +89,20 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
                 <div className="w-full h-full flex flex-col text-center space-y-2">
                   <h1 
                   style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
-                  className="lg:pt-[120px] pt-[80px] texto-subtitulos">
+                  className="lg:pt-[120px] pt-[80px] texto-titulos-alternativos text-white">
                     {recipe.name}
                   </h1>
                   
                   {/* Contenedor flex Calorias y Personas */}
                   <div className="w-full flex justify-between">
                     <h1 
-                       className="texto-general text-gray-500">
+                       className="texto-general text-gray-600">
                          {recipe.calories}
                     </h1>
 
                     <h1 
                        style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
-                       className="texto-general text-gray-500">
+                       className="texto-general text-gray-600">
                          {recipe.eat}
                     </h1>
                   </div>
@@ -117,7 +117,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
                     <HiArrowCircleRight 
                        style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
-                       className="w-[40px] h-[40px] cursor-pointer">
+                       className="w-[40px] h-[40px] cursor-pointer text-white">
                     </HiArrowCircleRight>
                   </div>
 

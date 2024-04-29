@@ -16,12 +16,16 @@
         @apply allura-regular xl:text-9xl lg:text-7xl md:text-6xl text-5xl;
     }
 
+    .texto-titulos-alternativos {
+      @apply allura-regular xl:text-2xl lg:text-2xl text-xl;
+  }
+
     .texto-subtitulos {
         @apply righteous-regular xl:text-lg text-[20px];
     }
 
     .texto-general {
-        @apply comfortaa xl:text-lg md:text-base text-xs;
+        @apply comfortaa md:text-base text-xs;
     }
 
     .texto-general-normal {

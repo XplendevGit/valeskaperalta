@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+import { HiArrowCircleRight } from "react-icons/hi";
+
 import SwiperSlideReceta from './SwiperSlideReceta';
 
 const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
