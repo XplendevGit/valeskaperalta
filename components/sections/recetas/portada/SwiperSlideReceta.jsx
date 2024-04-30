@@ -43,7 +43,6 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
   return (
     <>
       <Swiper
-      spaceBetween={30}
         freeMode={true}
         loop={true}
         pagination={{
@@ -72,11 +71,11 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
         {recipes.map((recipe, index) => (
           <SwiperSlide key={index}>
 
-            <div className="w-full h-full flex">
+            <div className="w-full h-[390px] lg:h-full pt-4 flex">
 
           {/* Contenedor Principal de las recetas */}
             <motion.div 
-            className={`w-full h-[390px] justify-center ${style['contenedor-recetas-portada']}`}
+            className={`w-full h-auto justify-center ${style['contenedor-recetas-portada']}`}
             whileHover={{ scale: 1.025, duration: 0.2 }}
             >
 
@@ -99,19 +98,19 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
             {/* Contenedor de Detalles de la Receta */}
               <motion.div 
               style={{ filter: 'drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.4))' }}
-              className={`w-full h-full lg:max-h-full max-h-[250px] max-w-[210px] bg-[#57E8D8] hover:bg-[${recipe.backgroundColor} rounded-xl lg:mt-[-8%] cursor-pointer pb-4 px-4 mx-auto ${style['recetas-portada-2']}`}
+              className={`w-full h-auto lg:max-h-full max-h-[250px] max-w-[210px] bg-emerald-300 hover:bg-[${recipe.backgroundColor} rounded-xl lg:mt-[-8%] cursor-pointer pb-6 px-4 mx-auto ${style['recetas-portada-2']}`}
               initial={{ opacity: 0, }}
               animate={{ opacity: 1, }}
               transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
               >
 
                 {/* Contenedor 2 de Detalles de la Receta */}
-                <div className="w-full h-full flex flex-col text-center space-y-2">
+                <div className="w-full h-full flex flex-col text-center space-y-2 ">
 
                   {/* Nombre de la Receta */}
                   <h1 
                   style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
-                  className="lg:pt-[120px] pt-[80px] texto-titulos-alternativos text-white">
+                  className="lg:pt-[110px] pt-[80px] texto-titulos-alternativos text-white">
                     {recipe.name}
                   </h1>
                   
@@ -131,8 +130,12 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
                 {/* Contenedor final Tipo y Botón de Ver */}
                   <div className="w-full h-full flex justify-between items-end">
-                {/*Renderización de Estrellas segun dificultad */}
-                  {renderDifficultyStars(recipe.difficulty)}
+
+                    <div className="w-full h-full flex space-x-2">
+                      {/*Renderización de Estrellas segun dificultad */}
+                       {renderDifficultyStars(recipe.difficulty)}
+                    </div>
+
 
                  {/*Boton Flecha */}
                     <HiArrowCircleRight 

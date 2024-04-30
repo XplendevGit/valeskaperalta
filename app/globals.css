@@ -17,7 +17,7 @@
     }
 
     .texto-titulos-alternativos {
-      @apply allura-regular xl:text-2xl lg:text-2xl text-xl;
+      @apply allura-regular xl:text-4xl text-4xl;
   }
 
     .texto-subtitulos {
