@@ -18,12 +18,16 @@ const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
      {/* Contenedor Titulos y Subtítulos de la Sección */}
        <div className="w-full h-full flex flex-col space-y-2 items-center">
 
-        <h1 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center">
+        <h1 
+        className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center"
+        style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}>
           Wake Up Mater Fuckersss 
         </h1>
 
         <div className="w-full h-full flex justify-center space-x-2">
-        <h2 className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center pt-[9.5px]">
+        <h2 
+        className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center pt-[9.5px]"
+        style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}>
           Recetas Populares
         </h2>
 

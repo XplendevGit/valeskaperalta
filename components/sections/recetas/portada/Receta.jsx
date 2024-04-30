@@ -10,7 +10,7 @@ const Receta = () => {
       type: "Desayuno",
       eat: "1 Persona",
       calories: "320 Calorías",
-      difficulty: 1,
+      popularity: 3,
       imageUrl: "https://i.postimg.cc/7PSDY4cb/anna-pelzer-IGf-IGP5-ONV0-unsplash-removebg-preview.png",
       backgroundColor: "#57E8D8"
     },
@@ -19,7 +19,7 @@ const Receta = () => {
       type: "Almuerzo",
       eat: "1 Persona",
       calories: "250 Calorías",
-      difficulty: 2,
+      popularity: 3,
       imageUrl: "https://i.postimg.cc/GmgJBZNs/eiliv-aceron-0g-Q8-Fh1f54k-unsplash-removebg-preview.png",
       backgroundColor: "#F2CD5D"
     },
@@ -28,7 +28,7 @@ const Receta = () => {
       type: "Almuerzo",
       eat: "1 Persona",
       calories: "480 Calorías",
-      difficulty: 3,
+      popularity: 3,
       imageUrl: "https://i.postimg.cc/hjtBCQsY/eiliv-aceron-m-W0-LIBBHNd-E-unsplash-removebg-preview.png",
       backgroundColor: "#E5979E"
     }

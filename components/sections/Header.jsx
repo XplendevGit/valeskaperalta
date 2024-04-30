@@ -16,6 +16,7 @@ const Header = () => {
   const [showTopHeader, setShowTopHeader] = useState(true);
   const topHeaderRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState('80px'); // Altura predeterminada del header
+  const [selectedLink, setSelectedLink] = useState(null);
 
   const navLinks = [
     { href: "/", label: "Inicio" },
@@ -108,7 +109,7 @@ const Header = () => {
               width={280}
               height={200}
               className="object-contain h-full w-full"
-              style={{ filter: 'drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.4))' }}
+              style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
             />
           </div>
 
@@ -144,19 +145,23 @@ const Header = () => {
             </button>
           </div>
 
+      {/* Contenedor Links de navegación Pantallas de Tablets y escritorio */}
           <div className="hidden md:flex h-auto xl:space-x-8 lg:space-x-6 space-x-4">
             {navLinks.map((link, index) => (
               <Link key={index} href={link.href}>
-                <h1 className="cursor-pointer lg:text-xl text-sm hover:scale-105 transition-all duration-150 text-white font-bold texto-general"
-                style={{ filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4))' }}>
-                  {link.label}
-                </h1>
+                <h1
+                   className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${selectedLink === index ? 'text-emerald-300' : 'text-white'}`}
+                   style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+                   onClick={() => setSelectedLink(index)}
+                    >
+                    {link.label}
+                 </h1>
               </Link>
             ))}
           </div>
         </div>
 
-      {/* Navigation Menu Mobil */}
+      {/* Contenedor Links de navegación Pantallas de MOBILES */}
         <AnimatePresence>
           {showMenu && (
             <motion.div
@@ -174,16 +179,16 @@ const Header = () => {
                 <motion.h1
                   key={index}
                   onClick={closeMenu}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   className="text-center w-auto transition-all"
                 >
                   <Link href={link.href}>
-                  <h1 className="cursor-pointer lg:text-xl text-sm hover:scale-105 transition-all  duration-150 text-white font-bold texto-general"
-                  style={{ filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4))' }}
-                  >
-                      {link.label}
-                  </h1>
+                  <h1
+                   className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${selectedLink === index ? 'text-emerald-300' : 'text-white'}`}
+                   style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+                   onClick={() => setSelectedLink(index)}
+                    >
+                    {link.label}
+                 </h1>
                   </Link>
                 </motion.h1>
               ))}
