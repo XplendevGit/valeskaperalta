@@ -18,6 +18,8 @@ const Header = () => {
   const [headerHeight, setHeaderHeight] = useState('80px'); // Altura predeterminada del header
   const [selectedLink, setSelectedLink] = useState(null);
 
+  const defaultSelectedIndex = 0;
+
   const navLinks = [
     { href: "/", label: "Inicio" },
     { href: "/servicios", label: "Servicios" },
@@ -84,7 +86,7 @@ const Header = () => {
           exit={{ opacity: 0, height: 0, }}
           transition={{ duration: 0.2 }}
           >
-            <TopHeader onClick={handleTopHeaderClick} />
+            <TopHeader />
           </motion.div>
         )}
       </AnimatePresence>
@@ -147,17 +149,21 @@ const Header = () => {
 
       {/* Contenedor Links de navegación Pantallas de Tablets y escritorio */}
           <div className="hidden md:flex h-auto xl:space-x-8 lg:space-x-6 space-x-4">
+            
             {navLinks.map((link, index) => (
               <Link key={index} href={link.href}>
-                <h1
-                   className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${selectedLink === index ? 'text-emerald-300' : 'text-white'}`}
-                   style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
-                   onClick={() => setSelectedLink(index)}
-                    >
-                    {link.label}
-                 </h1>
+               <h1
+                  className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${
+                  selectedLink === null ? (index === defaultSelectedIndex ? 'text-emerald-300' : 'text-white') : (selectedLink === index ? 'text-emerald-300' : 'text-white')
+                  }`}
+                  style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+                  onClick={() => setSelectedLink(index)}
+                  >
+                   {link.label}
+                </h1>
               </Link>
             ))}
+
           </div>
         </div>
 
@@ -181,15 +187,19 @@ const Header = () => {
                   onClick={closeMenu}
                   className="text-center w-auto transition-all"
                 >
-                  <Link href={link.href}>
-                  <h1
-                   className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${selectedLink === index ? 'text-emerald-300' : 'text-white'}`}
-                   style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
-                   onClick={() => setSelectedLink(index)}
-                    >
-                    {link.label}
-                 </h1>
+
+                  <Link key={index} href={link.href}>
+                    <h1
+                       className={`cursor-pointer lg:text-xl text-sm transition-all duration-200 font-bold texto-general hover:text-emerald-300 ${
+                       selectedLink === null ? (index === defaultSelectedIndex ? 'text-emerald-300' : 'text-white') : (selectedLink === index ? 'text-emerald-300' : 'text-white')
+                       }`}
+                       style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+                       onClick={() => setSelectedLink(index)}
+                       >
+                       {link.label}
+                    </h1>
                   </Link>
+
                 </motion.h1>
               ))}
             </motion.div>
