@@ -16,6 +16,24 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
   const [selectedRecipe, setSelectedRecipe] = useState(0);
 
+  const renderDifficultyStars = (difficulty) => {
+    const stars = [];
+    for (let i = 0; i < difficulty; i++) {
+      stars.push(
+      <Image 
+        key={i} 
+        src="https://i.postimg.cc/h4633Z0n/star.png" 
+        alt="star" 
+        className="w-10 h-10" 
+        height={500}
+        width={500}
+        style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
+        />
+        );
+    }
+    return stars;
+  };
+
   // mi primer handlehover para lograr cambiar varios aspectos de la pantalla
   const handleHoverChanges = () => {
     selectedRecipe === recipes.length - 1? setSelectedRecipe(0) : setSelectedRecipe(selectedRecipe);
@@ -24,7 +42,6 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
   return (
     <>
-      {/* Mostrar Swiper solo en pantallas con un ancho mayor o igual a 769px */}
       <Swiper
       spaceBetween={30}
         freeMode={true}
@@ -43,7 +60,7 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
             slidesPerView: 2,
 
           },
-          // Vista previa de 3 en pantallas más grandes
+          // Vista previa de 3 en pantallas de escritorio
           1024: {
             slidesPerView: 3,
  
@@ -56,12 +73,14 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
           <SwiperSlide key={index}>
 
             <div className="w-full h-full flex">
-            
+
+          {/* Contenedor Principal de las recetas */}
             <motion.div 
             className={`w-full h-[390px] justify-center ${style['contenedor-recetas-portada']}`}
             whileHover={{ scale: 1.025, duration: 0.2 }}
             >
 
+           {/* Imagen de la receta */}
               <div className={`w-[180px] lg:h-[180px] h-[160px] mx-auto z-10 ${style['recetas-portada-1']}`}>
                 <motion.img
                   className='w-full h-[152px] lg:h-[180px] object-cover cursor-pointer'
@@ -86,7 +105,10 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
               transition={{ duration: 0.2, type: "spring", stiffness: 100, damping: 10 }}
               >
 
+                {/* Contenedor 2 de Detalles de la Receta */}
                 <div className="w-full h-full flex flex-col text-center space-y-2">
+
+                  {/* Nombre de la Receta */}
                   <h1 
                   style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
                   className="lg:pt-[120px] pt-[80px] texto-titulos-alternativos text-white">
@@ -109,12 +131,10 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
                 {/* Contenedor final Tipo y Botón de Ver */}
                   <div className="w-full h-full flex justify-between items-end">
-                    <h1 
-                       style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}
-                       className="texto-general">
-                         {recipe.calories}
-                    </h1>
+                {/*Renderización de Estrellas segun dificultad */}
+                  {renderDifficultyStars(recipe.difficulty)}
 
+                 {/*Boton Flecha */}
                     <HiArrowCircleRight 
                        style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
                        className="w-[40px] h-[40px] cursor-pointer text-white">
