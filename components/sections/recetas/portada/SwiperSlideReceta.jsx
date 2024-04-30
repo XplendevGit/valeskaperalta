@@ -1,16 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, FreeMode } from 'swiper/modules';
+import { Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/free-mode';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import { HiArrowCircleRight } from "react-icons/hi";
 
 import style from './recetasportada.module.css'
-import { Scale } from 'lucide-react';
 
 const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
 
@@ -43,9 +41,9 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
   return (
     <>
       <Swiper
-        freeMode={true}
         loop={true}
         pagination={{
+          dynamicBullets: true,
           clickable: true,
         }}
         breakpoints={{
@@ -65,8 +63,8 @@ const SwiperSlideReceta = ({ recipes, handleRecipeHover }) => {
  
           },
         }}
-        modules={[Pagination, FreeMode]}
-        className="mySwiper "
+        modules={[Pagination]}
+        className="swiperslidecolor "
       >
         {recipes.map((recipe, index) => (
           <SwiperSlide key={index}>
