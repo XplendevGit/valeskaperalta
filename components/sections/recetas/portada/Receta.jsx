@@ -11,7 +11,7 @@ const Receta = () => {
       eat: "1 Persona",
       calories: "320 Calorías",
       popularity: 3,
-      imageUrl: "https://i.postimg.cc/7PSDY4cb/anna-pelzer-IGf-IGP5-ONV0-unsplash-removebg-preview.png",
+      imageUrl: "https://i.postimg.cc/hjtBCQsY/eiliv-aceron-m-W0-LIBBHNd-E-unsplash-removebg-preview.png",
       backgroundColor: "#57E8D8"
     },
     {

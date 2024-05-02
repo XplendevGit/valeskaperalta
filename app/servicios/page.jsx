@@ -1,4 +1,4 @@
-import Controles from '@/components/sections/servicios/Controles'
+import ServiciosPortada from '@/components/sections/servicios/portada/ServiciosPortada'
 import React from 'react'
 
 function Servicios() {
@@ -6,7 +6,7 @@ function Servicios() {
   return (
   <>
     <section>
-      <Controles />
+      <ServiciosPortada />
     </section>
   </>
   )
