@@ -9,14 +9,14 @@ const Servicio = () => {
         {
           title: "Ingreso",
           description: "Primera consulta nutricional etc etc",
-          price: "30.000",
+          price: "20.000",
           duration: "1.30 Hrs",
           imageUrl: "https://i.postimg.cc/hjtBCQsY/eiliv-aceron-m-W0-LIBBHNd-E-unsplash-removebg-preview.png",
           backgroundColor: "#57E8D8"
         },
         {
           title: "Control",
-          price: "30.000",
+          price: "14.500",
           duration: "1.30 Hrs",
           imageUrl: "https://i.postimg.cc/GmgJBZNs/eiliv-aceron-0g-Q8-Fh1f54k-unsplash-removebg-preview.png",
           backgroundColor: "#F2CD5D"
