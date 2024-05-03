@@ -8,10 +8,6 @@ const Recetas = () => {
     <section className="" id="recetasportada">
       <Receta />
     </section>
-
-    <section className="" id="recetashero">
-      <RecetasHero />
-    </section>
     
     </>
   )

@@ -10,7 +10,7 @@ import SwiperSlideReceta from './SwiperSlideReceta';
 
 const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
   return (
-    <div className="overflow-hidden h-full w-full lg:px-24 lg:py-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
+    <div className="overflow-hidden min-h-screen h-full w-full lg:px-24 lg:py-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
 
     {/* Contenedor Principal */}
       <div className="w-full h-full container items-center justify-center flex flex-col">

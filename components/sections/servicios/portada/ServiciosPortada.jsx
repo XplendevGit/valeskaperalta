@@ -7,7 +7,7 @@ const ServiciosPortada = ({ services }) => {
   console.log(services)
     return (
       <>
-        <div className="flex flex-col space-y-12 overflow-hidden min-h-screen h-full w-full items-center justify-between lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
+        <div className="flex flex-col space-y-12 overflow-hidden min-h-screen h-full w-full items-center justify-center lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
 
        {services.map((service, index) => (
 
@@ -24,7 +24,7 @@ const ServiciosPortada = ({ services }) => {
           >
             {/* Servicios Contenedor titulo */}
             <div 
-            className="flex w-full min-h-[88px] bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] justify-center items-center">
+            className="flex w-full min-h-[88px] bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] justify-center items-center rounded-[10px]">
               <h1 
               className="texto-titulos-alternativos text-white"
               style={{ filter: 'drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.4))' }}
