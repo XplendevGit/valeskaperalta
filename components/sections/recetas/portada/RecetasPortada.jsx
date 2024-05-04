@@ -16,23 +16,18 @@ const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
       <div className="w-full h-full container items-center justify-center flex flex-col">
      
      {/* Contenedor Titulos y Subtítulos de la Sección */}
-       <div className="w-full h-full flex flex-col space-y-2 items-center">
+       <div className="w-full h-full flex flex-col space-y-2 items-center justify-center">
 
-        <h1 
-        className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center"
-        style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}>
-          Wake Up Mater Fuckersss 
-        </h1>
+        <div className="w-full h-full flex justify-center space-x-4 items-center">
 
-        <div className="w-full h-full flex justify-center space-x-2">
         <h2 
-        className="texto-subtitulos text-white text-base lg:text-2xl xl:text-4xl text-center pt-[9.5px]"
+        className="texto-titulos text-white text-center"
         style={{ filter: 'drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.4))' }}>
           Recetas Populares
         </h2>
 
-          {/* Renderizado Imagen Para móviles */}
-          <Image
+                    {/* Renderizado Imagen Para móviles */}
+                    <Image
             src="https://i.postimg.cc/h4633Z0n/star.png"
             alt="star"
             className="w-8 h-8 lg:hidden"  // Se mostrará solo en pantallas más pequeñas que lg
@@ -50,12 +45,13 @@ const RecetasPortada = ({ recipes, selectedRecipe, handleRecipeHover }) => {
             width={500}
             style={{ filter: 'drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4))' }}
            />
+
         </div>
 
        </div>
 
        {/* Contenedor Swiper Recetas */}
-       <div className="lg:w-[850px] w-full h-full flex justify-center items-center mx-auto pt-[40px] lg:pt-[80px]">
+       <div className="lg:w-[850px] w-full h-full flex justify-center items-center mx-auto pt-[40px] lg:pt-[40px]">
 
         <SwiperSlideReceta recipes={recipes} handleRecipeHover={handleRecipeHover}>
 

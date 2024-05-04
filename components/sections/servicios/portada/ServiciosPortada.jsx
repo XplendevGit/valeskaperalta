@@ -9,6 +9,15 @@ const ServiciosPortada = ({ services }) => {
       <>
         <div className="flex flex-col space-y-12 overflow-hidden min-h-screen h-full w-full items-center justify-center lg:px-24 lg:p-y-24 px-6 py-24 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
 
+          <div className="flex w-full h-full justify-center items-center">
+            <h1 
+            className="texto-titulos text-white"
+            style={{ textShadow: "6px 6px 8px #022211" }} 
+            >
+              Mis Servicios
+            </h1>
+          </div>
+
        {services.map((service, index) => (
 
         <div 
