@@ -28,7 +28,7 @@ const navPages = [
 
 const Footer = () => {
   return (
-    <div className="w-full h-1/3 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c]">
+    <div className="w-full h-1/3 bg-gradient-to-r from-[#B7A1BC] to-[#d46d7c] border-t-[1px]">
 
       {/* Contenedor Principal del Footer */}
         <div className={`container ${style['contenedor-footer']}`} >
